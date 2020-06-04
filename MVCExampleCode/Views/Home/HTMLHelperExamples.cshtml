@@ -1,0 +1,94 @@
+﻿@model TestNetFrameworkMVC.Models.HTMLHelperExampleData
+
+@{
+    ViewBag.Title = "View";
+}
+
+@Styles.Render("~/Content/TestImportStylesheet.css")
+@Scripts.Render("~/Scripts/testAJAXDataLoad.js")
+
+<h2>View</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <h4 class="testBackground">Form Examples</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    @Html.HiddenFor(model => model.ID)
+
+    @*CHECKBOX*@
+    <div class="form-group">
+        @Html.LabelFor(model => model.checkbox, htmlAttributes: new { @class = "control-label col-md-2" })
+        @Html.CheckBoxFor(model => model.checkbox, new { @class = "form-check-input" })
+        @Html.ValidationMessageFor(model => model.checkbox, "", new { @class = "text-danger" })
+    </div>
+
+    @*ENUM DROP DOWN LIST*@
+    <div class="form-group">
+        @Html.LabelFor(model => model.enumDropDown, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EnumDropDownListFor(model => model.enumDropDown, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.enumDropDown, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    @*TEXT AREA*@
+    <div class="form-group">
+        @Html.LabelFor(model => model.enumDropDown, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextAreaFor(model => model.enumDropDown)
+        </div>
+    </div>
+
+    @*EditorFor AREA*@
+    <div class="form-group">
+        @Html.LabelFor(model => model.stringInput, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.stringInput, new { @class = "form-input" })
+            @Html.EditorFor(model => model.stringInput, new { @class = "form-input" })
+            @Html.ValidationMessageFor(model => model.stringInput, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.dateInput, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.dateInput, new { @class = "form-input" })
+            @Html.EditorFor(model => model.dateInput, new { @class = "form-input" })
+            @Html.ValidationMessageFor(model => model.dateInput, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    @*RADIO BUTTONS*@
+    <div class="form-group">
+        @Html.LabelFor(model => model.arrayDances, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @foreach (var dance in Model.arrayDances)
+            {
+                @Html.RadioButtonFor(m => dance, dance)
+                <label>@dance</label>
+            }
+        </div>
+    </div>
+
+
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+<hr />
+<div>
+    PartialView using DisplayTemplate
+    @Html.Partial("DisplayTemplates/DateTime", DateTime.Now)
+</div>
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

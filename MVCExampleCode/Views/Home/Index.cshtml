@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<link href="~/Content/Site.css" rel="stylesheet" />
+
+<div>
+    <h3>API Calls</h3>
+    <div class="flexColumn column">
+        <a class="navbar-link" href="/api/studentapi">All students</a>
+        <a class="navbar-link" href="/api/studentapi/1">Student 1</a>
+    </div>
+</div>
+
+<div>
+    <div>
+        <label>Student ID To Search</label>
+        <input id="getStudentId" type="text" />
+    </div>
+    <div>
+        <button id="getStudents" type="button" class="btn btn-primary">Get Students</button>
+        <button id="getStudent" type="button" class="btn btn-primary">Get Student with ID</button>
+    </div>
+    <div>
+        <button id="loadStudents" type="button" class="btn btn-primary">Load Students</button>
+        <button id="loadStudent" type="button" class="btn btn-primary">Load Student with ID</button>
+    </div>
+    <div>
+        <button id="loadStudentPageFragment" type="button" class="btn btn-primary">Load Page Fragment from Controller Action</button>
+    </div>
+</div>
+<div class="dataArea">
+    <h5>GetStudent Data Area</h5>
+    <div id="getStudentData"></div>
+</div>
+<div class="dataArea">
+    <h5>LoadStudent Data Area</h5>
+    <div id="loadStudentData"></div>
+</div>
+<div class="dataArea">
+    <h5>Load Page Fragment Data Area</h5>
+    <div id="loadPageFragment"></div>
+</div>
+
+@section scripts{
+    @Scripts.Render("~/bundles/api")
+}
