@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using TestNetFrameworkMVC.Models;
+using MVCExampleCode.Models;
 
-namespace TestNetFrameworkMVC.Controllers
+namespace MVCExampleCode.Controllers
 {
     public class HomeController : Controller
     {

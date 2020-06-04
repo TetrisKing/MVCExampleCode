@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace TestNetFrameworkMVC.Models
+namespace MVCExampleCode.Models
 {
     public class Course
     {

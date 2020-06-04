@@ -6,11 +6,11 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using TestNetFrameworkMVC;
-using TestNetFrameworkMVC.DAL;
-using TestNetFrameworkMVC.Models;
+using MVCExampleCode;
+using MVCExampleCode.DAL;
+using MVCExampleCode.Models;
 
-namespace TestNetFrameworkMVC.Controllers
+namespace MVCExampleCode.Controllers
 {
     public class StudentController : Controller
     {

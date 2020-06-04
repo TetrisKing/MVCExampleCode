@@ -7,7 +7,7 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using System.Web.Http;
 
-namespace TestNetFrameworkMVC
+namespace MVCExampleCode
 {
     public class MvcApplication : System.Web.HttpApplication
     {

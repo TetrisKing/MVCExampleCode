@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace TestNetFrameworkMVC
+namespace MVCExampleCode
 {
     public class BundleConfig
     {

@@ -4,9 +4,9 @@ using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Web;
-using TestNetFrameworkMVC.Models;
+using MVCExampleCode.Models;
 
-namespace TestNetFrameworkMVC.DAL
+namespace MVCExampleCode.DAL
 {
     public class SchoolContext : DbContext
     {
@@ -22,6 +22,6 @@ namespace TestNetFrameworkMVC.DAL
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
 
-        public System.Data.Entity.DbSet<TestNetFrameworkMVC.Models.HTMLHelperExampleData> HelperTesters { get; set; }
+        public System.Data.Entity.DbSet<MVCExampleCode.Models.HTMLHelperExampleData> HelperTesters { get; set; }
     }
 }

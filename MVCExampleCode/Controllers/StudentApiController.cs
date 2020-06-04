@@ -10,10 +10,10 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
 using System.Web.Mvc;
-using TestNetFrameworkMVC.DAL;
-using TestNetFrameworkMVC.Models;
+using MVCExampleCode.DAL;
+using MVCExampleCode.Models;
 
-namespace TestNetFrameworkMVC.Controllers
+namespace MVCExampleCode.Controllers
 {
     public class StudentApiController : ApiController
     {

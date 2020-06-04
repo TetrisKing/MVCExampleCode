@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace TestNetFrameworkMVC.Models
+namespace MVCExampleCode.Models
 {
     public class ApiStudent
     {

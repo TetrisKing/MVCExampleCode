@@ -6,7 +6,7 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace TestNetFrameworkMVC
+namespace MVCExampleCode
 {
     public class RouteConfig
     {

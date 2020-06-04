@@ -4,14 +4,15 @@
 <link href="~/Content/Site.css" rel="stylesheet" />
 
 <div>
-    <h3>API Calls</h3>
+    <h4>API Calls</h4>
     <div class="flexColumn column">
         <a class="navbar-link" href="/api/studentapi">All students</a>
         <a class="navbar-link" href="/api/studentapi/1">Student 1</a>
     </div>
 </div>
-
+<hr />
 <div>
+    <h4>AJAX Calls</h4>
     <div>
         <label>Student ID To Search</label>
         <input id="getStudentId" type="text" />
@@ -40,6 +41,12 @@
     <h5>Load Page Fragment Data Area</h5>
     <div id="loadPageFragment"></div>
 </div>
+
+@section footer{
+    <footer>
+        <p>RenderSectionFooter - &copy; @DateTime.Now.Year - My ASP.NET Application</p>
+    </footer>
+}
 
 @section scripts{
     @Scripts.Render("~/bundles/api")

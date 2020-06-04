@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using TestNetFrameworkMVC.Models;
+using MVCExampleCode.Models;
 
-namespace TestNetFrameworkMVC.DAL
+namespace MVCExampleCode.DAL
 {
     public class SchoolInitializer : System.Data.Entity.DropCreateDatabaseIfModelChanges<SchoolContext>
     {
